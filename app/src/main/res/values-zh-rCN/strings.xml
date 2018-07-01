@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_home">首页</string>
+    <string name="title_dashboard">看板</string>
+    <string name="title_notifications">通知</string>
+    <string name="edit_message">请输入文字</string>
+    <string name="button_send">发送</string>
+</resources>

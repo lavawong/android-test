@@ -4,33 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="MainActivity"
+    tools:context=".MainActivity"
     tools:layout_editor_absoluteY="25dp">
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/edit_message"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <include layout="@layout/app_bar"
+        android:id="@+id/top_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:onClick="sendMessage"
-        android:text="@string/button_send"
-        android:visibility="visible"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ipAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="8sp"
+                android:singleLine="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:hint="@string/edit_message"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toStartOf="@+id/button"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ipAddress"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:onClick="sendMessage"
+                android:text="@string/button_send"
+                android:visibility="visible"
+                app:layout_constraintBaseline_toBaselineOf="@+id/editText"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_conversion_absoluteHeight="48dp"
+                tools:layout_conversion_absoluteWidth="391dp" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

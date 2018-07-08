@@ -1,9 +1,12 @@
-package com.lavawong.myapplication;
+package com.lavawong.worldcup;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.lavawong.worldcup.MainActivity;
+import com.lavawong.worldcup.R;
 
 public class DisplayMessageActivity extends AppCompatActivity {
 

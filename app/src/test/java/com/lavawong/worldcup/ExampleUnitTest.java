@@ -1,4 +1,4 @@
-package com.lavawong.myapplication;
+package com.lavawong.worldcup;
 
 import org.junit.Test;
 
